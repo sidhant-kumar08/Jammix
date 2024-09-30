@@ -69,7 +69,7 @@ function Login() {
 
       <div className="min-h-screen justify-center flex  overflow-hidden">
         <form onSubmit={handleSubmit}>
-        <div className="bg-white px-6 md:w-96 py-16 shadow rounded-3xl">
+        <div className="bg-transparent md:bg-white px-6 md:w-96 py-16 md:shadow rounded-3xl">
           <div className="justify-center flex text-black text-3xl font-[700] mb-8">
             <h1>Log in</h1>
           </div>
