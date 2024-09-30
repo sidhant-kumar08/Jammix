@@ -46,7 +46,7 @@ function Navbar() {
 
 
 
-      <div className={`md:hidden sm:flex transition ease-linear duration-100 ${mobileMenu ? '-rotate-180' : ''}`}>
+      <div className={`md:hidden sm:flex transition ease-linear duration-100 mr-4 ${mobileMenu ? '-rotate-180' : ''}`}>
         <button onClick={()=> setMobileMenu(!mobileMenu)}><CgMenuRightAlt /></button>
       </div>
 
