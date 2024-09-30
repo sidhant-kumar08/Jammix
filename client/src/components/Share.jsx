@@ -51,7 +51,7 @@ function Share() {
 
       <div className=" justify-center flex flex-col items-center overflow-hidden">
         <form onSubmit={handleSubmit}>
-          <div className="bg-white px-6 md:w-96 shadow py-16 flex flex-col gap-4 rounded-3xl">
+          <div className="bg-transparent md:bg-white px-6 md:w-96 md:shadow py-16 flex flex-col gap-4 rounded-3xl">
             <div>
               <h1 className="text-3xl text-black font-bold">
                 Share Your Playlist
