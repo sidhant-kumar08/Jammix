@@ -98,12 +98,12 @@ function LandingPage() {
 
         <div>
            <GradualSpacing
-            className="font-display text-center text-wrap text-2xl md:text-5xl font-bold -tracking-widest  text-black dark:text-white md:leading-[5rem]"
+            className="font-display text-center text-wrap mt-4 text-2xl md:text-5xl font-bold -tracking-widest  text-black dark:text-white md:leading-[5rem]"
             text="Discover,  Share  &  Groove."
             />
         </div>
 
-        <div className="justify-center text-center flex flex-col text-wrap select-none">
+        <div className="justify-center text-center flex flex-col mt-2 text-wrap select-none">
           <h2 className="text-lg md:text-2xl font-[300] font-[geist]">
             Playlists from Spotify and YouTube. 🎵
           </h2>
