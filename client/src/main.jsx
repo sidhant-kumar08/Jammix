@@ -10,6 +10,9 @@ import Share from './components/Share.jsx'
 import AuthProvider, { AuthContext } from './context/AuthContext.jsx'
 import AuthenticatedRoute from './AuthenticatedRoute.jsx'
 import LandingPage from './components/LandingPage.jsx'
+import { inject } from '@vercel/analytics';
+
+inject();
 
 
 
