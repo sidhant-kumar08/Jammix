@@ -33,7 +33,7 @@ function Navbar() {
     <>
       <nav className='px-6 py-2 flex justify-between items-center shadow-inner'>
         <div>
-            <Link to='/'><img width={150} height={200} className='bg-transparent mix-blend-multiply' src="./logo.png" alt="logo" /></Link>
+            <Link to='/'><img width={150} height={200} className='bg-transparent mix-blend-multiply left-0' src="./logo.png" alt="logo" /></Link>
         </div>
 
     { isAuthenticated ? <button onClick={handleLogout} className='px-3  items-center gap-2 py-1 border border-zinc-500 hover:bg-black hover:text-white transition ease-linear duration-100 hidden md:flex rounded-2xl'>Logout <IoLogOutOutline /></button> :
