@@ -13,7 +13,7 @@ function SharedPlaylist() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/playlist/')
+        const response = await axios.get('https://jammix.onrender.com/playlist/')
         const { playLists } = response.data // Destructure the playLists array from the response data
         setCardData(playLists)
         console.log(cardData);
