@@ -45,7 +45,7 @@ function Login() {
 
     async function handleSubmit(e){
         e.preventDefault();
-        const response = await axios.post('http://localhost:4000/auth/login',formData, {
+        const response = await axios.post('https://jammix.onrender.com/auth/login',formData, {
           withCredentials : true
         })
         if(response.status == 200){
