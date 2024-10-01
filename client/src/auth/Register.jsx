@@ -22,7 +22,7 @@ function Register() {
     async function handleSubmit(e){
         e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:4000/auth/register',formData)
+          const response = await axios.post('https://jammix.onrender.com/auth/register',formData)
           alert(response.data?.message)
           if(response.status == 201){
             navigate('/home');
