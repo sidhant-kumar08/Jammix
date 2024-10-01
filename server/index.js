@@ -18,7 +18,7 @@ app.use(express.urlencoded({
     extended: true
 }))
 app.use(cors({
-    origin: 'https://jammix.vercel.app/',
+    origin: 'https://jammix.vercel.app',
     credentials: true
 }))
 app.use(cookieParser())
