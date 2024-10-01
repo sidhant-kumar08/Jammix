@@ -136,14 +136,14 @@ function Share() {
         </form>
 
         <div className="flex justify-center items-center mt-4">
-          <button
+          <a href="https://jammix.onrender.com/auth/spotify/login"><button
             type="reset"
-            onClick={handleLogin}
+            
             className="bg-black flex h-8 items-center gap-2 hover:bg-zinc-800 shadow text-nowrap text-white rounded-xl px-6 py-2 font-[500] text-sm"
           >
             Authorize
             <MdOutlineSecurity />
-          </button>
+          </button></a>
         </div>
       </div>
     </>
