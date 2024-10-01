@@ -16,7 +16,7 @@ function Navbar() {
   const handleLogout = async () => {
     try {
 
-      const response = await axios.post('http://localhost:4000/auth/logout',{},{
+      const response = await axios.post('https://jammix.onrender.com/auth/logout',{},{
         withCredentials: true
       });
       setIsAuthenticated(false)
