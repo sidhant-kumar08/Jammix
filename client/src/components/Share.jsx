@@ -17,27 +17,61 @@ function Share() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleLogin = async () => {
+  // Function to detect if the link is for YouTube or Spotify
+  const detectLinkType = (link) => {
+    if (link.includes("youtube.com") || link.includes("youtu.be")) {
+      console.log('youtube')
+      return "youtube";
+    } else if (link.includes("spotify.com")) {
+      return "spotify";
+    }
+    return null;
+  };
+
+  // Handle the playlist submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const linkType = detectLinkType(formData.link);
+
     try {
-      window.location.href = "http://localhost:4000/auth/spotify/login";
+      if (linkType === "youtube") {
+        // If it's a YouTube link, call the YouTube endpoint
+        const response = await axios.post(
+          "http://localhost:4000/playlist/youtube",
+          formData,
+          {
+            withCredentials: true,
+          }
+        );
+        const data = await response.data;
+        console.log("YouTube playlist submitted:", data);
+      } else if (linkType === "spotify") {
+        // If it's a Spotify link, proceed with the Spotify authorization process
+        const response = await axios.post(
+          "http://localhost:4000/playlist/share",
+          formData,
+          {
+            withCredentials: true,
+          }
+        );
+        const data = await response.data;
+        console.log("Spotify playlist submitted:", data);
+      } else {
+        alert("Invalid link. Please enter a YouTube or Spotify playlist link.");
+        return;
+      }
+
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }
   };
 
-  const handleSubmit = async () => {
+  // Spotify login flow
+  const handleLogin = async () => {
     try {
-      const response = axios.post(
-        "http://localhost:4000/playlist/share",
-        formData,
-        {
-          withCredentials: true,
-        }
-      );
-      const data = await response;
-
-      console.log("share playlist called");
-      navigate("/home");
+      window.location.href = "http://localhost:4000/auth/spotify/login";
     } catch (error) {
       console.log(error);
     }
@@ -49,13 +83,11 @@ function Share() {
         <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div>
       </div>
 
-      <div className=" justify-center flex flex-col items-center overflow-hidden">
+      <div className="justify-center flex flex-col items-center overflow-hidden">
         <form onSubmit={handleSubmit}>
           <div className="bg-transparent md:bg-white px-6 md:w-96 md:shadow py-16 flex flex-col gap-4 rounded-3xl">
             <div>
-              <h1 className="text-3xl text-black font-bold">
-                Share Your Playlist
-              </h1>
+              <h1 className="text-3xl text-black font-bold">Share Your Playlist</h1>
               <p>
                 Before clicking add, please click on authorize otherwise it will
                 throw an error (only once)

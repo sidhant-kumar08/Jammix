@@ -1,3 +1,4 @@
+import { ArrowRight, ArrowRightCircle } from 'lucide-react'
 import React from 'react'
 
 function Card({ data }) {
@@ -12,8 +13,8 @@ function Card({ data }) {
             <h2>{data.title}</h2>
         </div>
 
-        <div>
-          <a href={data.link} target='blank' className='text-blue-500 hover:text-blue-400'>{`Go to spotify >`}</a>
+        <div className='flex justify-center'>
+          <a href={data.link} target='blank' className='text-blue-500 flex text-center gap-2 hover:text-blue-400'>Listen Now <ArrowRightCircle /> </a>
         </div>
       </div>
 

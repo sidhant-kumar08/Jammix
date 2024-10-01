@@ -115,7 +115,7 @@ function LandingPage() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <button class="group relative inline-flex h-9 items-center justify-center overflow-hidden rounded-2xl bg-neutral-950 px-6 font-medium text-neutral-200 duration-500">
+          <Link to='/login'><button class="group relative inline-flex h-9 items-center justify-center overflow-hidden rounded-2xl bg-neutral-950 px-6 font-medium text-neutral-200 duration-500">
             <div class="translate-x-0 opacity-100 transition group-hover:-translate-x-[150%] group-hover:opacity-0">
               Get Started
             </div>
@@ -136,7 +136,7 @@ function LandingPage() {
                 ></path>
               </svg>
             </div>
-          </button>
+          </button></Link>
         </div>
 
         <div className="mt-12">
