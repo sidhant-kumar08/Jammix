@@ -48,7 +48,7 @@ router.get('/callback', async (req,res)=>{
         httpOnly : true,
         secure : false
     })
-    res.redirect('https://jammix.vercel.app/share');
+    res.redirect('https://jammix.vercel.app');
     } catch (error) {
         console.log(`error is in /callback`)
     }
