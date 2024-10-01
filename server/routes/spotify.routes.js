@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.get('/login', async (req,res)=>{
     try {
+        console.log("login called")
         const scope = 'playlist-read-private playlist-read-collaborative';
         const authUrl = `https://accounts.spotify.com/authorize?${querystring.stringify({
             response_type: 'code',
@@ -25,6 +26,7 @@ router.get('/login', async (req,res)=>{
 router.get('/callback', async (req,res)=>{
 
     try {
+        console.log("callback called");
         const {code} = req.query;
 
     const tokenUrl = 'https://accounts.spotify.com/api/token';
