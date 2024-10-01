@@ -38,7 +38,7 @@ function Share() {
       if (linkType === "youtube") {
         // If it's a YouTube link, call the YouTube endpoint
         const response = await axios.post(
-          "http://localhost:4000/playlist/youtube",
+          "https://jammix.onrender.com/playlist/youtube",
           formData,
           {
             withCredentials: true,
@@ -49,7 +49,7 @@ function Share() {
       } else if (linkType === "spotify") {
         // If it's a Spotify link, proceed with the Spotify authorization process
         const response = await axios.post(
-          "http://localhost:4000/playlist/share",
+          "https://jammix.onrender.com/playlist/share",
           formData,
           {
             withCredentials: true,
@@ -71,7 +71,7 @@ function Share() {
   // Spotify login flow
   const handleLogin = async () => {
     try {
-      window.location.href = "http://localhost:4000/auth/spotify/login";
+      window.location.href = "https://jammix.onrender.com/auth/spotify/login";
     } catch (error) {
       console.log(error);
     }
