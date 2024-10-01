@@ -48,7 +48,9 @@ router.get('/callback', async (req,res)=>{
         httpOnly : true,
         secure : false
     })
-    res.redirect('https://jammix.vercel.app');
+    return res.status(200).json({
+        message : "Success"
+    })
     } catch (error) {
         console.log(`error is in /callback`)
     }
