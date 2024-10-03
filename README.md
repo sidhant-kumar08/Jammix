@@ -24,7 +24,7 @@
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/jammix.git
+    git clone https://github.com/sidhant-kumar08/jammix.git
     ```
 2. Install dependencies:
     ```bash
